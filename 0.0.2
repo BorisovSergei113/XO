@@ -39,6 +39,8 @@ void next_turn(char ** pole,bool player){
     cout<<choose<<"->quit"<<endl;
 }
 
+void del_mem(char**);
+
 void next_turn(char **pole,int turn,bool player){
     int choose =1;
     for (int i =0; i<5; i++) {
@@ -58,6 +60,7 @@ void next_turn(char **pole,int turn,bool player){
     }
     if(turn==choose){
         cout<<"Quit"<<endl;
+        del_mem(pole);
         exit(0);
     }
 }
